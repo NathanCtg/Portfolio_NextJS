@@ -1,0 +1,107 @@
+/* Navigation.css */
+.navbar {
+    background-color: #222; /* Solid color */
+    color: white;
+    padding: 20px; /* Navbar height */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for better contrast */
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+    display: none; /* Hide by default */
+}
+
+.mode-toggle,
+.nav-items button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 1rem; /* Standard font size */
+}
+
+.nav-items {
+    display: flex;
+    gap: 15px; /* Increase space between buttons for better appearance */
+}
+
+.nav-items.open {
+    display: flex; /* Show menu items if open */
+}
+
+.drawer {
+    background-color: #444;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    z-index: 999;
+    transition: transform 0.3s ease; /* Opening animation */
+    padding-top: 30px; /* Adjust this value based on your navbar height */
+}
+
+.drawer-content {
+    padding: 20px;
+}
+
+.drawer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.drawer li {
+    margin: 10px 0; /* Space between list items */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #0d1116;
+    color: #e0e0e0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-button {
+        display: flex; /* Show on mobile screens */
+    }
+
+    .nav-items {
+        display: none; /* Hide navigation items on small screens */
+    }
+
+    .nav-items.open {
+        display: flex; /* Show navigation items if menu is open */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar {
+        padding: 10px; /* Adjust padding on small screens if necessary */
+    }
+
+    .toolbar {
+        flex-direction: row; /* Row layout on small screens */
+        align-items: center; /* Center alignment */
+        justify-content: space-between; /* Space between items */
+    }
+}

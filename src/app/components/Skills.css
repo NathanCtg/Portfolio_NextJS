@@ -1,0 +1,154 @@
+/* Container settings */
+.skills-container {
+    padding: 3% 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #0d1116; /* Fond sombre */
+    width: 100vw; /* Largeur de la fenêtre */
+    margin: 0 auto; /* Centrer le conteneur */
+}
+
+/* Titre des compétences */
+#Skills .skills-container h1 {
+    font-size: 2rem;
+    color: #fefefe;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-align: center; /* Center the title */
+    padding-left: 0; /* Remove left padding */
+}
+
+/* Grid and skill card styling */
+.skills-container .skills-grid {
+    display: grid; /* Utilisation de la grille */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colonnes flexibles */
+    gap: 30px; /* Espacement entre les éléments */
+    padding: 0 10%; /* Espacement à gauche et à droite */
+}
+
+.skill {
+    background: linear-gradient(135deg, #1e293b, #334155); /* Fond des cartes de compétences */
+    margin-bottom: 2.5%;
+    border-radius: 10px;
+    padding: 20px; /* Espacement interne */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Ombre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition */
+}
+
+.skill:hover {
+    transform: translateY(-5px); /* Élément qui se soulève au survol */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Ombre accrue au survol */
+}
+
+.skill h3 {
+    color: #fefefe; /* Couleur du titre */
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+
+.skill:hover h3 {
+    color: #a5b4fc; /* Couleur au survol */
+}
+
+.skill p {
+    color: #cbd5e1; /* Couleur du texte */
+    font-size: 0.95rem;
+    line-height: 1.6; /* Hauteur de ligne pour le texte */
+    margin-bottom: 1.5rem;
+}
+
+/* Chip styling */
+.chip {
+    color: #1e293b; /* Couleur du texte des chips */
+    background-color: #dbeafe; /* Couleur de fond des chips */
+    font-size: 0.85rem;
+    border-radius: 12px; /* Coins arrondis */
+    padding: 0.25rem 0.75rem; /* Espacement interne */
+    display: inline-flex;
+    align-items: center;
+    margin: 0.1rem 0.2rem; /* Marges autour des chips */
+    position: relative; /* Pour le pseudo-élément */
+    overflow: hidden; /* Débordement caché */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transition */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* Ombre */
+    transform: translateY(-5px); /* Déplacement vers le haut */
+}
+
+.chip:hover {
+    background-color: #bfdbfe; /* Changement de couleur au survol */
+    transform: translateY(-1px); /* Légère élévation au survol */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre accrue au survol */
+}
+
+.chip::before {
+    content: '';
+    position: absolute; /* Positionnement absolu */
+    top: 100%; /* En dessous de l'élément */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* Fond semi-transparent */
+    transition: top 0.3s ease; /* Transition */
+    z-index: 0; /* Sous l'élément */
+}
+
+.chip:hover::before {
+    top: 0; /* Afficher l'élément au survol */
+}
+
+/* Flex layout for chips */
+/* Flex layout for chips */
+.flex-chips {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow chips to wrap */
+    justify-content: flex-start; /* Align chips to the start */
+    gap: 0.2rem; /* Gap between chips */
+    margin-top: 0.5rem; /* Top margin */
+}
+
+/* Icon settings */
+#Skills .icon {
+    font-size: 3rem; /* Taille des icônes */
+    margin-bottom: 1rem; /* Marge en bas */
+}
+
+
+
+@media (min-width: 1024px) {
+    .skills-container {
+        padding: 3% 10%; /* Augmenter le padding pour les grands écrans */
+    }
+}
+
+/* Media Query pour les petits écrans (moins de 768px) */
+@media (max-width: 768px) {
+    .chip {
+        transform: translateY(0); /* Pas de déplacement sur les petits écrans */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 5%; /* Augmenter le padding sur mobile */
+    }
+    .skills-container .skills-grid {
+        display: block; /* Passer à un affichage en bloc sur mobile */
+    }
+    .skill {
+        padding-bottom: 5%; /* Espacement en bas */
+    }
+}
+
+@media (max-width: 567px) {
+    .skill h3 {
+        font-size: 1.2rem; /* Réduire la taille du texte sur mobile */
+    }
+    .chip {
+        font-size: 0.75rem; /* Réduire la taille des chips */
+        height: 22px; /* Hauteur des chips */
+    }
+}

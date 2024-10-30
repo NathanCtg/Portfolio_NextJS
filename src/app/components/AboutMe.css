@@ -1,0 +1,68 @@
+.about-me-container {
+    padding: 3% 5%;
+    text-align: center;
+    background-color: #0d1116; /* Couleur de fond noir */
+    color: #fff; /* Texte blanc */
+    width: 100vw; /* Largeur complète */
+    margin: 0 auto; /* Centrer le conteneur */
+    min-height: 50vh; /* Hauteur minimale */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre portée */
+}
+
+.about-me-container h1 {
+    font-size: 2rem; /* Font size */
+    margin-bottom: 2rem; /* Bottom margin */
+    font-weight: bold; /* Bold font */
+    text-align: center; /* Center the title */
+    padding-left: 0; /* Remove left padding */
+    color: #fefefe; /* Accent color */
+}
+
+.about-me-container p {
+    font-size: 1.2rem; /* Taille du texte */
+    margin-bottom: 3rem; /* Espacement en bas du texte */
+    line-height: 1.6; /* Hauteur de ligne pour améliorer la lisibilité */
+}
+
+.download-cv-button {
+    background-color: #fefefe; /* Couleur de fond du bouton */
+    color: #121212; /* Couleur du texte du bouton */
+    padding: 0.75rem 1.5rem; /* Espacement interne du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 1rem; /* Taille du texte */
+    transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) { /* Pour les écrans de portable */
+    .about-me-container h1 {
+        font-size: 1.5rem; /* Réduction de la taille de police */
+    }
+
+    .about-me-container p {
+        font-size: 1rem; /* Réduction de la taille du texte */
+    }
+
+    .download-cv-button {
+        padding: 0.5rem 1rem; /* Ajustement de l'espacement interne */
+        font-size: 0.9rem; /* Réduction de la taille du texte du bouton */
+    }
+}
+
+@media (max-width: 480px) { /* Pour les écrans de téléphone */
+    .about-me-container h1 {
+        font-size: 1.2rem; /* Réduction supplémentaire de la taille de police */
+    }
+
+    .about-me-container p {
+        font-size: 0.9rem; /* Réduction supplémentaire de la taille du texte */
+    }
+
+    .download-cv-button {
+        padding: 0.4rem 0.8rem; /* Ajustement de l'espacement interne */
+        font-size: 0.8rem; /* Réduction de la taille du texte du bouton */
+    }
+}
