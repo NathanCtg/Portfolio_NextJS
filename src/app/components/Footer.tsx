@@ -9,15 +9,12 @@ function Footer() {
                 <a href="https://github.com/NathanCtg" target="_blank" rel="noreferrer">
                     <FaGithub className="icon" />
                 </a>
-                <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/nathan-cartegnie-05b210286/" target="_blank" rel="noreferrer">
                     <FaLinkedin className="icon" />
                 </a>
             </div>
             <p>
-                A portfolio designed & built by
-                <a href="https://github.com/yujisatojr/react-portfolio-template" target="_blank" rel="noreferrer">
-                    Nathan Cartegnie
-                </a>
+                A portfolio designed & built by Nathan Cartegnie
             </p>
         </footer>
     );

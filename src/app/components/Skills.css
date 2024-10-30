@@ -73,14 +73,14 @@
     position: relative; /* Pour le pseudo-élément */
     overflow: hidden; /* Débordement caché */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transition */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* Ombre */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ombre */
     transform: translateY(-5px); /* Déplacement vers le haut */
 }
 
 .chip:hover {
     background-color: #bfdbfe; /* Changement de couleur au survol */
     transform: translateY(-1px); /* Légère élévation au survol */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre accrue au survol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre accrue au survol */
 }
 
 .chip::before {

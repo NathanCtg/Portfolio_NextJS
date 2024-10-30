@@ -9,7 +9,7 @@ function AboutMe() {
                 Passionné par le développement logiciel, j'ai l'occasion de renforcer mes compétences techniques dans
                 divers langages et frameworks, tout en restant à l'affût des dernières innovations technologiques.
                 Motivé et curieux, je suis toujours prêt à apprendre et à relever de nouveaux défis.</p>
-            <a href="/path/to/your/cv.pdf" download className="download-cv-button">Télécharger mon CV</a>
+            <a href="" download className="download-cv-button">Télécharger mon CV</a>
         </div>
     );
 }
