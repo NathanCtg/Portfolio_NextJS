@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
-import './Navigation.css';
 
-const navItems = [['A propos de moi', 'About me'], ['Compétences', 'Skills'], ['Parcours', 'School-careers'], ['Projet', 'Project']];
+const navItems = [
+    ['À propos de moi', 'APropos'],
+    ['Compétences', 'Compétences'],
+    ['Parcours', 'Parcours_Scolaire'],
+    ['Projets', 'Projets']
+];
 
 interface NavigationProps {
     parentToChild: {
@@ -15,26 +19,10 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
     const { mode } = parentToChild;
 
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const navbar = document.getElementById("navigation");
-            if (navbar) {
-                const scrolled = window.scrollY > navbar.clientHeight;
-                setScrolled(scrolled);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     const scrollToSection = (section: string) => {
         const sectionElement = document.getElementById(section);
@@ -42,6 +30,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
             const navbarHeight = document.getElementById("navigation")?.clientHeight || 0;
             const sectionPosition = sectionElement.offsetTop - navbarHeight;
             window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
+            setMobileOpen(false); // Ferme le menu après la sélection d'une section
         } else {
             console.error(`Element with id "${section}" not found`);
         }
@@ -49,31 +38,39 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
 
     return (
         <div>
-            <nav id="navigation" className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-                <div className="toolbar">
-                    <button className="menu-button" onClick={handleDrawerToggle}>
+            <nav
+                id="navigation"
+                className={`fixed w-full z-50 bg-[#222] text-white shadow-md transition-all duration-300 py-5`}
+            >
+                <div className="flex justify-between items-center px-5">
+                    <button className="md:hidden bg-transparent text-white text-lg" onClick={handleDrawerToggle}>
                         <FaBars />
-                        {mobileOpen && <span>Menu</span>}
                     </button>
-                    <button className="mode-toggle" onClick={modeChange}>
+
+                    <button
+                        className="bg-transparent text-white text-lg"
+                        onClick={modeChange}
+                    >
                         {mode === 'dark' ? 'Mode Clair' : 'Mode Sombre'}
                     </button>
-                    <div className="nav-items">
+
+                    <div className="hidden md:flex space-x-4">
                         {navItems.map((item) => (
-                            <button key={item[0]} onClick={() => scrollToSection(item[1])}>
+                            <button key={item[0]} className="bg-transparent text-white text-lg" onClick={() => scrollToSection(item[1])}>
                                 {item[0]}
                             </button>
                         ))}
                     </div>
                 </div>
             </nav>
+
             {mobileOpen && (
-                <div className="drawer">
-                    <div className="drawer-content" onClick={handleDrawerToggle}>
-                        <ul>
-                            {navItems.map((item) => (
-                                <li key={item[0]}>
-                                    <button onClick={() => scrollToSection(item[1])}>
+                <div className="fixed left-0 top-0 w-1/2 h-full bg-[#444] text-white transition-transform duration-300 z-40 overflow-auto"> {/* Couleur de fond solide */}
+                    <div className="flex flex-col items-center p-5"> {/* Centre les éléments dans le menu */}
+                        <ul className="w-full flex flex-col items-center"> {/* Alignement vertical des éléments */}
+                            {navItems.map((item, index) => (
+                                <li key={item[0]} className={`mb-4 ${index === 0 ? 'mt-16' : ''}`}> {/* Ajuste le premier élément avec mt-16 */}
+                                    <button className="bg-transparent text-white text-lg" onClick={() => scrollToSection(item[1])}>
                                         {item[0]}
                                     </button>
                                 </li>

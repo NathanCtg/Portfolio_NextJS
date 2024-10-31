@@ -3,12 +3,12 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "./components/Navigation";
 import Main from "./components/Main";
-import AboutMe from "@/app/components/AboutMe";
+import APropos from "@/app/components/APropos";
 import Timeline from "@/app/components/Timeline";
 import Skills from "@/app/components/Skills";
-import Project from "@/app/components/Project";
+import Projet from "@/app/components/Projet";
 import Footer from "@/app/components/Footer";
-// import { Main, Timeline, Expertise, Project, Navigation, Footer, FadeIn } from "./components";
+// import { Main, Timeline, Expertise, Projet, Navigation, Footer, FadeIn } from "./components";
 // import './index.scss';
 
 function App() {
@@ -26,10 +26,10 @@ function App() {
     <div className={`main-container ${mode === 'dark' ? 'dark' : 'light'}`}>
       { <Navigation parentToChild={{ mode }} modeChange={handleModeChange} /> }
         { <Main /> }
-        { <AboutMe />}
+        { <APropos />}
         { <Skills /> }
         { <Timeline /> }
-        { <Project /> }
+        { <Projet /> }
       { <Footer /> }
     </div>
   );
