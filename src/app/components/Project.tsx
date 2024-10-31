@@ -1,12 +1,12 @@
 import React from "react";
 import './Project.css';
 import Image from 'next/image';
-import img1 from '../images/portfolio.png';
-import img2 from '../images/rtx.png';
-import img3 from '../images/pokedex.png';
-import img4 from '../images/flatcraft.png';
-import img5 from '../images/jo.png';
-import img6 from '../images/puissance_4.png';
+import img1 from '../images/portfolio.webp';
+import img2 from '../images/rtx.webp';
+import img3 from '../images/pokedex.webp';
+import img4 from '../images/flatcraft.webp';
+import img5 from '../images/jo.webp';
+import img6 from '../images/puissance_4.webp';
 
 
 
