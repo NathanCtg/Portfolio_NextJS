@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     box-sizing: border-box;
 }
@@ -8,16 +7,14 @@ body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
-    background-color: #000; /* Fond noir */
-    color: #fff; /* Texte en blanc pour contraste */
+    background-color: #000;
+    color: #fff;
 }
 
-/* Dark Mode Styles */
 .dark-mode .about-section {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* About Section */
 .about-section {
     display: flex;
     flex-direction: row;
@@ -27,7 +24,7 @@ body {
     min-height: 100vh;
     padding: 100px 17.5%;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.8); /* Couleur noire avec légère transparence */
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1;
 }
 
@@ -46,7 +43,6 @@ body {
     z-index: -1;
 }
 
-/* Image Wrapper */
 .image-wrapper {
     width: 200px;
     border-radius: 50%;
@@ -58,10 +54,9 @@ body {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    border: 4px solid #fff; /* Bordure blanche pour mettre en valeur l'image */
+    border: 4px solid #fff;
 }
 
-/* Content Styling */
 .content {
     text-align: left;
     z-index: 2;
@@ -77,11 +72,10 @@ h1 {
 
 p {
     font-size: 1.5em;
-    color: #ccc; /* Texte gris clair pour contraste */
+    color: #ccc;
     margin: 0;
 }
 
-/* Social Icons */
 .social-icons,
 .mobile-social-icons {
     display: flex;
@@ -97,15 +91,13 @@ p {
 }
 
 #Main .icon:hover {
-    color: #1da1f2; /* Couleur bleu clair au survol */
+    color: #1da1f2;
 }
 
-/* Mobile social icons (hidden on larger screens) */
 .mobile-social-icons {
     display: none;
 }
 
-/* Media Queries */
 @media (max-width: 1024px) {
     .image-wrapper {
         width: 250px;
@@ -137,7 +129,7 @@ p {
     }
 
     .text-container {
-        margin: 0 auto; /* Centre le texte horizontalement */
+        margin: 0 auto;
     }
 
     h1 {
@@ -165,7 +157,7 @@ p {
     }
 
     .icon {
-        font-size: 1em; /* Smaller icon size for mobile screens */
+        font-size: 1em;
     }
 }
 

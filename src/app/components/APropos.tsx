@@ -15,8 +15,7 @@ function APropos() {
                     Télécharger mon CV
                 </a>
             </div>
-            {/* Ajoute un div pour l'espacement entre sections */}
-            <div className="my-12" /> {/* Ajuste la valeur si nécessaire */}
+            <div className="my-12" />
         </div>
     );
 }

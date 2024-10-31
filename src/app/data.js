@@ -1,4 +1,3 @@
-// src/app/data.js
 export const experiences = [
     {
         title: "BUT Informatique (Alternance)",

@@ -30,7 +30,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
             const navbarHeight = document.getElementById("navigation")?.clientHeight || 0;
             const sectionPosition = sectionElement.offsetTop - navbarHeight;
             window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
-            setMobileOpen(false); // Ferme le menu après la sélection d'une section
+            setMobileOpen(false);
         } else {
             console.error(`Element with id "${section}" not found`);
         }
@@ -65,11 +65,11 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
             </nav>
 
             {mobileOpen && (
-                <div className="fixed left-0 top-0 w-1/2 h-full bg-[#444] text-white transition-transform duration-300 z-40 overflow-auto"> {/* Couleur de fond solide */}
-                    <div className="flex flex-col items-center p-5"> {/* Centre les éléments dans le menu */}
-                        <ul className="w-full flex flex-col items-center"> {/* Alignement vertical des éléments */}
+                <div className="fixed left-0 top-0 w-1/2 h-full bg-[#444] text-white transition-transform duration-300 z-40 overflow-auto">
+                    <div className="flex flex-col items-center p-5">
+                        <ul className="w-full flex flex-col items-center">
                             {navItems.map((item, index) => (
-                                <li key={item[0]} className={`mb-4 ${index === 0 ? 'mt-16' : ''}`}> {/* Ajuste le premier élément avec mt-16 */}
+                                <li key={item[0]} className={`mb-4 ${index === 0 ? 'mt-16' : ''}`}>
                                     <button className="bg-transparent text-white text-lg" onClick={() => scrollToSection(item[1])}>
                                         {item[0]}
                                     </button>

@@ -7,7 +7,6 @@ const Timeline = () => {
             <div className="max-w-5xl mx-auto text-center px-4">
                 <h1 className="text-3xl text-white font-bold mb-10">Mon Parcours Scolaire</h1>
                 <div className="relative flex flex-col items-center">
-                    {/* Ligne de la timeline */}
                     <div className="absolute left-1/2 top-0 w-[3px] h-full bg-[#add8e6] transform -translate-x-1/2"></div>
                     {experiences.map((exp, index) => (
                         <div

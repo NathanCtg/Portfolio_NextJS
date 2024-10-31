@@ -8,8 +8,6 @@ import Timeline from "@/app/components/Timeline";
 import Skills from "@/app/components/Skills";
 import Projet from "@/app/components/Projet";
 import Footer from "@/app/components/Footer";
-// import { Main, Timeline, Expertise, Projet, Navigation, Footer, FadeIn } from "./components";
-// import './index.scss';
 
 function App() {
   const [mode, setMode] = useState<string>('dark');
@@ -23,15 +21,15 @@ function App() {
   }, []);
 
   return (
-    <div className={`main-container ${mode === 'dark' ? 'dark' : 'light'}`}>
-      { <Navigation parentToChild={{ mode }} modeChange={handleModeChange} /> }
+      <div className={`main-container ${mode === 'dark' ? 'dark' : 'light'}`}>
+        { <Navigation parentToChild={{ mode }} modeChange={handleModeChange} /> }
         { <Main /> }
         { <APropos />}
         { <Skills /> }
         { <Timeline /> }
         { <Projet /> }
-      { <Footer /> }
-    </div>
+        { <Footer /> }
+      </div>
   );
 }
 

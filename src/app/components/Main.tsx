@@ -1,20 +1,20 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import Image from "next/image"; // Importer le composant Image de Next.js
-import "./Main.css";
+import Image from "next/image";
+import newAvatar from '../../../public/images/avatar.avif';
+import "../styles/Main.css";
 
 function Main() {
     return (
         <div className="container" id="Main">
             <div className="about-section">
                 <div className="image-wrapper">
-                    {/* Remplacez <img> par <Image> */}
                     <Image
-                        src="https://img.freepik.com/vecteurs-premium/avatar-ours-profil-ours-abstrait-isole-ours-costume-affaires_118339-4190.jpg"
+                        src={newAvatar}
                         alt="Avatar"
-                        width={200} // Définir une largeur (adaptable selon vos besoins)
-                        height={200} // Définir une hauteur (adaptable selon vos besoins)
-                        layout="responsive" // Optionnel, pour que l'image s'ajuste à son conteneur
+                        width={200}
+                        height={200}
+                        sizes="(max-width: 768px) 100vw, 200px"
                     />
                 </div>
                 <div className="content">
