@@ -60,7 +60,9 @@
     border-radius: 5px;
     transition: transform 0.2s;
     margin: 0 auto;
-    height: 300px;
+    height: auto; /* Ajuste la hauteur pour maintenir le ratio d'origine */
+    width: 100%; /* S'adapte à la largeur de la box */
+    max-height: 250px; /* Limite la hauteur maximale */
     object-fit: cover;
 }
 
